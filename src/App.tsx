@@ -1,10 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import Routers from "./Routers";
+import { ThemeProvider } from "@emotion/react";
+import theme from "./theme/Theme";
+import { globalStyles } from "./theme/globalStyles";
 
-function App() {
-  return <Routers />;
-}
+const App: React.FC = () => (
+  <ThemeProvider theme={theme}>
+    {globalStyles}
+    <Routers />
+  </ThemeProvider>
+);
 
 export default App;
