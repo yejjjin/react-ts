@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout: React.FC = () => (
   <div>
-    <Header />
+    <Header z-10 />
     <main id="main">
       <Outlet />
     </main>
